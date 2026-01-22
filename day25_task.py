@@ -1,12 +1,8 @@
+def is_palindrome(s):
+    reversed_string = []
 
-def isPalindrome(s):
-    word = list(s.lower())
-    reversed = []
-
-    for i in range(len(word) -1, -1, -1):
-        reversed.append(word[i])
-
-    return word == reversed
-
-print(isPalindrome('kjfd'))
-
+    for i in range(len(s)-1, -1, -1):
+        reversed_string.append(s[i])
+    return reversed_string == [*s]
+print(is_palindrome('malayalam'))
+        
