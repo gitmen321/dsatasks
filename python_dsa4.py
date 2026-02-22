@@ -1,4 +1,5 @@
-numbers = [1,2,3]
+numbers = [1, 2, 3]
+
 
 def is_duplicated(nums):
     seen = set()
@@ -8,5 +9,5 @@ def is_duplicated(nums):
         seen.add(num)
     return False
 
+
 print(is_duplicated(numbers))
-    

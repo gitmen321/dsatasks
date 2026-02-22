@@ -1,7 +1,8 @@
-#two sum, optimized with hash map
+# two sum, optimized with hash map
 
-numbers = [2,7,11,15]
+numbers = [2, 7, 11, 15]
 target = 9
+
 
 def sumofTwo(nums, targ):
     seen = {}
