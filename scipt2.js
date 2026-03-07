@@ -1,19 +1,17 @@
-//debounce function
+//debounce function: it allows minimum time duration in each function function calling
 
-function debounce(fn, delay){
+ const debounce = (fn, delay) => {
     let timeOutId;
 
-    return function(...args){
-         clearTimeout(timeOutId);
+    return (...args) => {
+        clearTimeout(timeOutId);
 
-         timeOutId = setTimeout(() => {
-            fn.apply(this, args);
-         }, delay);
+        timeOutId = setTimeout(() => {
+            fn.apply(args, this);
+        }, delay);
     }
-} 
+ }
 
-const log = debounce(() => console.log("Hello"), 1000);
-
-log();
-log();
-log();
+ const logs = debounce(() => console.log("Debouncing"), 3000);
+ logs();
+ logs();
