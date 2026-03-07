@@ -3,10 +3,9 @@
 nums = [1, 2, 1, 0, 1, 1, 0]
 k = 4
 
-
-def long_subarray(nums, k):
-    left = 0
+def long_sub_array(nums,k):
     current_sum = 0
+    left = 0
     max_length = 0
 
     for right in range(len(nums)):
@@ -18,4 +17,4 @@ def long_subarray(nums, k):
         max_length = max(max_length, right - left + 1)
     return max_length
 
-print(long_subarray(nums, k))
+print(long_sub_array(nums, k))
