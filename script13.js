@@ -19,3 +19,11 @@ function removeDupllicates(arr) {
     return uniqueArr;
 };
 console.log(removeDupllicates(nums));
+
+function removeDup(arr){
+
+    const uniqueMap = new Map(arr.map(item => [item, item]));
+    return Array.from(uniqueMap.values());
+}
+
+console.log(removeDup(nums));
