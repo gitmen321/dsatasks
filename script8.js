@@ -2,18 +2,20 @@
 
 const input = [5, 2, 8, 10, 3];
 
-function secLargest(nums) {
+function seclargest(nums) {
     let largest = -Infinity;
     let second = -Infinity;
 
-    for (let num of nums){
+    for(let num of nums){
         if (num > largest) {
             second = largest;
             largest = num;
-        } else if(num > second && num !== largest){
+        }
+        else if (num >second && num !== largest) {
             second = num;
         }
     }
-    return console.log(second);
+    return second;
 }
-secLargest(input);
+
+console.log(seclargest(input));

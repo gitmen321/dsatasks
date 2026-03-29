@@ -1,17 +1,17 @@
 // debounce function
 
 function debounce(fn, delay) {
-    let timer;
-
+    let timeOutId;
     return (...args) => {
-        clearTimeout(timer);
+        clearTimeout(timeOutId);
 
-        timer = setTimeout(() => {
+        timeOutId = setTimeout(() => {
             fn.apply(args, this);
         }, delay);
     }
 }
 
-const logs = debounce(() => console.log("Happening after some second"), 2000);
-logs();
-logs();
+const logger = debounce(()=> console.log('Raaz'), 2000);
+logger();
+logger();
+logger();

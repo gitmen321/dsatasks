@@ -2,16 +2,15 @@
 
 const nums = [2, 3, 4, 2, 4, 5, 6, 2, 6, 7, 6];
 
-function removeDuplicates(arr) {
-    return Array.from(new Set(arr));
+function removeDuplicates(nums) {
+    return Array.from(new Set(nums));
 }
-
 console.log(removeDuplicates(nums));
 
 function removeDupllicates(arr) {
     let uniqueArr = [];
 
-    for (let i = 0;  i<= arr.length - 1; i++){
+    for (let i = 0; i <= arr.length - 1; i++) {
         if (uniqueArr.indexOf(arr[i]) == -1) {
             uniqueArr.push(arr[i]);
         }
@@ -20,9 +19,8 @@ function removeDupllicates(arr) {
 };
 console.log(removeDupllicates(nums));
 
-function removeDup(arr){
-
-    const uniqueMap = new Map(arr.map(item => [item, item]));
+function removeDup(nums) {
+    const uniqueMap = new Map(nums.map(num => [num, num]));
     return Array.from(uniqueMap.values());
 }
 
