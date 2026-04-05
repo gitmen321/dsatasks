@@ -1,21 +1,21 @@
 // find the second largest number in array
 
-const input = [5, 2, 8, 10, 3];
+const input = [5, 2, 8, 15, 10, 3];
 
-function seclargest(nums) {
+function secLargest(input) {
     let largest = -Infinity;
-    let second = -Infinity;
+    let secLargest = -Infinity;
 
-    for(let num of nums){
+    for (let num of input) {
         if (num > largest) {
-            second = largest;
+            secLargest = largest;
             largest = num;
-        }
-        else if (num >second && num !== largest) {
-            second = num;
+        } else if
+            (num > secLargest && num <= largest) {
+                secLargest = num;
         }
     }
-    return second;
+    return secLargest;
 }
 
-console.log(seclargest(input));
+console.log(secLargest(input));
