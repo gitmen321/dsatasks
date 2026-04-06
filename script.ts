@@ -13,3 +13,5 @@ async function retry(fn: Function, retries: number) {
 
 const result =  retry(()=> console.log("Raaz"), 2);
 
+
+

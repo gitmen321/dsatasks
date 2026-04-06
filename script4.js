@@ -1,4 +1,3 @@
-
 class RateLimiter {
     constructor(windowMs, limit) {
         this.windowMs = windowMs,
@@ -8,29 +7,23 @@ class RateLimiter {
 
     isAllowed(userId) {
         const now = new Date();
-
-        if (!this.memory.has(userId)) {
-            this.memory.set(userId, {
-                count: 1,
-                startTime: now
-            });
-            return true;
-        }
-
         const userData = this.memory.get(userId);
 
-        if (now - userData.startTime > this.windowMs) {
+        if (!this.memory.has(userId) || now - userData.startTime > this.windowMs) {
             this.memory.set(userId, {
                 count: 1,
-                startTime: now
+                startTime: now,
             });
             return true;
         }
 
         if (userData.count < this.limit) {
-            userData.count++;
+
+            userData.count += 1;
             return true;
         }
+
+
         return false;
     }
 }
