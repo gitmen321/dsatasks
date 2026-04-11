@@ -2,14 +2,21 @@ let a = 20;
 let b = 10;
 let temp;
 
-temp = a; //temp: 20
-a = b; //a: 10
-b = temp; //b: 20 (a)
-
+temp = a;
+a = b;
+b = temp;
 console.log("a:", a, "b:", b); //now a= 10, b=20
 
-a = a + b; //a = 30
-b = a -b; // b= 10
-a = a - b; //a = 20
+a = a + b;
+b = a - b;
+a = a - b;
 
 console.log("a:", a, "b:", b);
+
+const namee = "RAAZ";
+let reversedName = '';
+
+for (let i = namee.length - 1; i >= 0; i--) {
+    reversedName += namee[i];
+}
+console.log(reversedName);
