@@ -44,3 +44,12 @@ for i in range(n):
     print("")
     
     
+
+for i in range(2*n):
+
+    row = i if  i < n else (2 * n - 1 - i)
+
+    stars = "*" *(n - row)
+    space = " " *(2 * row)
+
+    print(stars+space+stars)
